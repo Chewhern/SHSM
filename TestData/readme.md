@@ -4,7 +4,9 @@ The data within the **Users** folder had been pre-generated with the following c
 ```
 RevampedKeyPair MyED25519KeyPair = SodiumPublicKeyAuth.GenerateRevampedKeyPair();
 File.WriteAllBytes(AppContext.BaseDirectory + "\\SubDSAPrivateKey.txt", MyED25519KeyPair.PrivateKey);
+//File.WriteAllBytes(AppContext.BaseDirectory + "/SubDSAPrivateKey.txt", MyED25519KeyPair.PrivateKey); <- Linux
 File.WriteAllBytes(AppContext.BaseDirectory + "\\SubDSAPublicKey.txt", MyED25519KeyPair.PublicKey);
+//File.WriteAllBytes(AppContext.BaseDirectory + "\\SubDSAPublicKey.txt", MyED25519KeyPair.PublicKey); <- Linux
 MyED25519KeyPair.Clear();
 ```
 Or
@@ -12,6 +14,8 @@ Or
 ED448RevampedKeyPair MyKeyPair = SecureED448.GenerateED448RevampedKeyPair();
 File.WriteAllBytes(AppContext.BaseDirectory + "\\SubDSAPrivateKey.txt", MyKeyPair.PrivateKey);
 File.WriteAllBytes(AppContext.BaseDirectory + "\\SubDSAPublicKey.txt", MyKeyPair.PublicKey);
+//File.WriteAllBytes(AppContext.BaseDirectory + "/SubDSAPrivateKey.txt", MyKeyPair.PrivateKey); <- Linux
+//File.WriteAllBytes(AppContext.BaseDirectory + "/SubDSAPublicKey.txt", MyKeyPair.PublicKey); <- Linux
 MyKeyPair.Clear();
 ```
 
@@ -31,7 +35,9 @@ This set of test data will only be valid latest until the end of November (For S
 ```
 RevampedKeyPair MyED25519KeyPair = SodiumPublicKeyAuth.GenerateRevampedKeyPair();
 File.WriteAllBytes(AppContext.BaseDirectory + "\\SubDSAPrivateKey.txt", MyED25519KeyPair.PrivateKey);
+//File.WriteAllBytes(AppContext.BaseDirectory + "/SubDSAPrivateKey.txt", MyED25519KeyPair.PrivateKey); <- Linux
 File.WriteAllBytes(AppContext.BaseDirectory + "\\SubDSAPublicKey.txt", MyED25519KeyPair.PublicKey);
+//File.WriteAllBytes(AppContext.BaseDirectory + "\\SubDSAPublicKey.txt", MyED25519KeyPair.PublicKey); <- Linux
 MyED25519KeyPair.Clear();
 ```
 或者
@@ -39,6 +45,8 @@ MyED25519KeyPair.Clear();
 ED448RevampedKeyPair MyKeyPair = SecureED448.GenerateED448RevampedKeyPair();
 File.WriteAllBytes(AppContext.BaseDirectory + "\\SubDSAPrivateKey.txt", MyKeyPair.PrivateKey);
 File.WriteAllBytes(AppContext.BaseDirectory + "\\SubDSAPublicKey.txt", MyKeyPair.PublicKey);
+//File.WriteAllBytes(AppContext.BaseDirectory + "/SubDSAPrivateKey.txt", MyKeyPair.PrivateKey); <- Linux
+//File.WriteAllBytes(AppContext.BaseDirectory + "/SubDSAPublicKey.txt", MyKeyPair.PublicKey); <- Linux
 MyKeyPair.Clear();
 ```
 
