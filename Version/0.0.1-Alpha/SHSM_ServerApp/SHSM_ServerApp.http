@@ -1,0 +1,6 @@
+@SHSM_ServerApp_HostAddress = http://localhost:5028
+
+GET {{SHSM_ServerApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
