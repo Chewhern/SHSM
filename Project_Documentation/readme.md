@@ -1,0 +1,19 @@
+# Flow
+Below states the flow of the readme(s).
+
+1. Project Positioning
+2. Core Definitions
+3. Use Cases
+4. Dependencies
+5. Developing HSM considerations
+6. Operations Flow
+7. Deployment and security
+8. Client Language Support
+9. Known Limitations and current status
+
+# Regional and Collaboration Notes
+## Malaysia
+If you are deploying in Malaysia, note that VPS hosting capable of fully supporting this project's code is currently only available from major providers such as Amazon, Google, Microsoft, and Alibaba.
+
+## Outside Malaysia
+For contributions from outside Malaysia, any pull requests or issues raised should be designed to be zero-trust and publicly disclosable by default.
