@@ -1,0 +1,143 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:SHSM_ClientApp.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="SHSM_ClientApp.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+  <TabControl Name="SHSM_Tab" Margin="2">
+  <TabItem Header="IP Config">
+      <StackPanel HorizontalAlignment="Left">
+        <StackPanel Orientation="Horizontal">
+          <StackPanel Orientation="Vertical">
+            <ToggleButton Name="IPOpsAppToggleBTN1" Background="White" Content=" 1. Server's IP configuration " Margin="0,5,0,0" Padding="0,10,10,10"/>
+            <ToggleButton Name="IPOpsAppToggleBTN2" Background="White" Content=" 2. Fetch Server Information " Margin="0,5,0,0" Padding="0,10,5,10"/>
+          </StackPanel>
+          <StackPanel Name="IPOpsAppLowerRightSP" Orientation="Vertical" Margin="25,15,0,0">
+
+          </StackPanel>
+        </StackPanel>
+      </StackPanel>
+    </TabItem>
+    <TabItem Header="Registration">
+      <StackPanel HorizontalAlignment="Left">
+        <StackPanel Orientation="Horizontal">
+          <StackPanel Name="RegistrationOpsAppLowerLeftSP" Orientation="Vertical">
+            <ToggleButton Name="RegistrationOpsAppToggleBTN1" Background="White" Content=" 1. Register account " Margin="0,5,0,0" Padding="0,10,50,10"/>
+            <ToggleButton Name="RegistrationOpsAppToggleBTN2" Background="White" Content=" 2. Change information " Margin="0,5,0,0" Padding="0,10,29,10"/>
+          </StackPanel>
+          <StackPanel Name="RegistrationOpsAppLowerMidSP" Orientation="Vertical" Margin="25,15,0,0">
+
+          </StackPanel>
+          <StackPanel Name="RegistrationOpsAppLowerRightSP" Orientation="Vertical" Margin="25,15,0,0">
+
+          </StackPanel>
+        </StackPanel>
+      </StackPanel>
+    </TabItem>
+    <TabItem Header="ETLS">
+      <StackPanel HorizontalAlignment="Left">
+        <StackPanel Orientation="Horizontal">
+          <StackPanel Name="ETLSOpsAppLowerLeftSP" Orientation="Vertical">
+              <ToggleButton Name="ETLSOpsAppToggleBTN1" Background="White" Content=" 1. Initiate ETLS" Margin="0,5,0,0" Padding="0,10,15,10"/>
+              <ToggleButton Name="ETLSOpsAppToggleBTN2" Background="White" Content=" 2. Delete ETLS" Margin="0,5,0,0" Padding="0,10,14,10"/>
+          </StackPanel>
+          <StackPanel Name="ETLSOpsAppLowerMidSP" Orientation="Vertical" Margin="25,15,0,0">
+
+          </StackPanel>
+          <StackPanel Name="ETLSOpsAppLowerRightSP" Orientation="Vertical" Margin="25,15,0,0">
+
+          </StackPanel>
+        </StackPanel>
+      </StackPanel>
+    </TabItem>
+    <TabItem Header="Public Key Cryptography">
+      <StackPanel HorizontalAlignment="Left">
+        <StackPanel Orientation="Horizontal">
+          <StackPanel Name="PublicKeyCryptographyOpsAppLowerLeftSP" Orientation="Vertical">
+            <ToggleButton Name="PublicKeyCryptographyOpsAppToggleBTN1" Background="White" Content=" 1. Initiate DSA Keys" Margin="0,5,0,0" Padding="0,10,74,10" IsEnabled="False"/>
+            <ToggleButton Name="PublicKeyCryptographyOpsAppToggleBTN2" Background="White" Content=" 1/2. Import Keys" Margin="0,5,0,0" Padding="0,10,95,10"/>
+            <ToggleButton Name="PublicKeyCryptographyOpsAppToggleBTN3" Background="White" Content=" 2/3. Sign Data" Margin="0,5,0,0" Padding="0,10,107,10"/>
+            <ToggleButton Name="PublicKeyCryptographyOpsAppToggleBTN4" Background="White" Content=" 2/3. Sealedbox Decrypt Data" Margin="0,5,0,0" Padding="0,10,10,10"/>
+            <ToggleButton Name="PublicKeyCryptographyOpsAppToggleBTN5" Background="White" Content=" 2/3. KEM Decrypt Data" Margin="0,5,0,0" Padding="0,10,49,10" IsEnabled="False"/>
+            <ToggleButton Name="PublicKeyCryptographyOpsAppToggleBTN6" Background="White" Content=" 2/3. Extend Duration" Margin="0,5,0,0" Padding="0,10,65,10"/>
+            <ToggleButton Name="PublicKeyCryptographyOpsAppToggleBTN7" Background="White" Content=" 2/3. Export DSA keys" Margin="0,5,0,0" Padding="0,10,59,10" IsEnabled="False"/>
+          </StackPanel>
+          <StackPanel Name="PublicKeyCryptographyOpsAppLowerMidSP" Orientation="Vertical" Margin="25,15,0,0">
+
+          </StackPanel>
+          <StackPanel Name="PublicKeyCryptographyOpsAppLowerRightSP" Orientation="Vertical" Margin="25,15,0,0">
+
+          </StackPanel>
+        </StackPanel>
+      </StackPanel>
+    </TabItem>
+  <TabItem Header="Secret Key Cryptography">
+      <StackPanel HorizontalAlignment="Left">
+        <StackPanel Orientation="Horizontal">
+          <StackPanel Name="SecretKeyCryptographyOpsAppLowerLeftSP" Orientation="Vertical">
+            <ToggleButton Name="SecretKeyCryptographyOpsAppToggleBTN1" Background="White" Content=" 1. Initialize A Pair of Secret Keys " Margin="0,5,0,0" Padding="0,10,9,10"/>
+            <ToggleButton Name="SecretKeyCryptographyOpsAppToggleBTN2" Background="White" Content=" 2. Import A Pair Of Secret Keys " Margin="0,5,0,0" Padding="0,10,14,10"/>
+            <ToggleButton Name="SecretKeyCryptographyOpsAppToggleBTN3" Background="White" Content=" 2/3. Encrypt Data " Margin="0,5,0,0" Padding="0,10,103,10"/>
+            <ToggleButton Name="SecretKeyCryptographyOpsAppToggleBTN4" Background="White" Content=" 2/3. Decrypt Data " Margin="0,5,0,0" Padding="0,10,102,10"/>
+            <ToggleButton Name="SecretKeyCryptographyOpsAppToggleBTN5" Background="White" Content=" 2/3. Export A Pair Of Secret Keys " Margin="0,5,0,0" Padding="0,10,2,10"/>
+            <ToggleButton Name="SecretKeyCryptographyOpsAppToggleBTN6" Background="White" Content=" 2/3. Extend Duration " Margin="0,5,0,0" Padding="0,10,84,10"/>
+          </StackPanel>
+          <StackPanel Name="SecretKeyCryptographyOpsAppLowerMidSP" Orientation="Vertical" Margin="25,15,0,0">
+
+          </StackPanel>
+          <StackPanel Name="SecretKeyCryptographyOpsAppLowerRightSP" Orientation="Vertical" Margin="25,15,0,0">
+
+          </StackPanel>
+        </StackPanel>
+      </StackPanel>
+    </TabItem>
+  <TabItem Header="Arweave">
+      <StackPanel HorizontalAlignment="Left">
+        <StackPanel Orientation="Horizontal">
+          <StackPanel Name="ArweaveOpsAppLowerLeftSP" Orientation="Vertical">
+              <ToggleButton Name="ArweaveOpsAppToggleBTN1" Background="White" Content=" 1. Upload Data To Arweave" Margin="0,5,0,0" Padding="0,10,15,10"/>
+          </StackPanel>
+          <StackPanel Name="ArweaveOpsAppLowerMidSP" Orientation="Vertical" Margin="25,15,0,0">
+
+          </StackPanel>
+          <StackPanel Name="ArweaveOpsAppLowerRightSP" Orientation="Vertical" Margin="25,15,0,0">
+
+          </StackPanel>
+        </StackPanel>
+      </StackPanel>
+    </TabItem>
+  <TabItem Header="SHSM">
+      <StackPanel HorizontalAlignment="Left">
+        <StackPanel Orientation="Horizontal">
+          <StackPanel Name="SHSMOpsAppLowerLeftSP" Orientation="Vertical">
+              <ToggleButton Name="SHSMOpsAppToggleBTN1" Background="White" Content=" 1. Delete SHSM" Margin="0,5,0,0" Padding="0,10,15,10"/>
+          </StackPanel>
+          <StackPanel Name="SHSMOpsAppLowerMidSP" Orientation="Vertical" Margin="25,15,0,0">
+
+          </StackPanel>
+          <StackPanel Name="SHSMOpsAppLowerRightSP" Orientation="Vertical" Margin="25,15,0,0">
+
+          </StackPanel>
+        </StackPanel>
+      </StackPanel>
+    </TabItem>
+  <TabItem Header="API Key">
+      <StackPanel HorizontalAlignment="Left">
+        <StackPanel Orientation="Vertical">
+          <TextBlock Margin="0,20,0,0">There're no fixed templates for API Key protection.</TextBlock>
+          <TextBlock Margin="0,20,0,0">Protecting API key needs to start with SHSM server side customization.</TextBlock>
+          <TextBlock Margin="0,20,0,0">Then followed by developer customization.</TextBlock>
+          <TextBlock Margin="0,20,0,0">As most API keys were in String format or immutable data type,</TextBlock>
+          <TextBlock Margin="0,20,0,0">this's the only part that must be handled specifically by C#.</TextBlock>
+        </StackPanel>
+      </StackPanel>
+    </TabItem>
+  </TabControl>
+</UserControl>
