@@ -1,0 +1,3 @@
+# Current limitations/Bugs
+1. Sometimes the project may result in sudden crashing on the server side, this's primarily due to the use of pointers or unmanaged memory coming from libsodium or C language as a whole. This did get mitigated by preventing the use of certain functions on the client's app.
+2. Sometimes the project may have runtime error of **Arithmetic operations resulted in an overflow.**, I am not sure if this will get triggered again. Prior to uploading server side's code, I did changed the data copying from integer variant into long variant inside **PublicKeyCryptography** and **SecretKeyCryptography** on the server side for safety measures. If it did happen, can let me know by issuing issues.
