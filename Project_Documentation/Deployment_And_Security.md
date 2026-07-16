@@ -26,6 +26,7 @@ There are several types of security settings:
 1. Ensure that the PC/Laptop acting as the SHSM Server has HTTPS enabled and uses certificates signed by any CA (Certificate Authority).
 2. Ensure that the router or networking devices use open-source router software (e.g., OpenWrt, DD‑WRT). This helps reduce the risk of backdoors or vulnerabilities in proprietary firmware.
 3. Ensure that the SHSM Server has DNSSEC properly configured. DNSSEC helps prevent DNS spoofing and ensures that clients connect to the intended SHSM server. This may be harder to do in a private setting.
+4. Ensure that the VPS disabled **swap partitions**.
 
 ### Highest Security (Public)
 Same applies, but without step 2 (open-source router software).
