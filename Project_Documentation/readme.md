@@ -12,6 +12,9 @@ Below states the flow of the readme(s).
 9. Known Limitations and current status
 10. Blockchain oracle and other questions
 
+# Linux and Progression
+As the project progresses, the SHSM server side code is recommended to be hosted on a **Linux** VPS or VM. This is due to it has better OS flexibility and control over **Windows** and **MacOS**
+
 # Regional and Collaboration Notes
 ## Malaysia
 If you are deploying in Malaysia, note that VPS hosting capable of fully supporting this project's code is currently only available from major providers such as Amazon, Google, Microsoft, and Alibaba.
