@@ -28,5 +28,7 @@ SHSM is licensed under the AGPL, allowing anyone to deploy, modify, and audit it
 ## Deployment Prerequisites
 The core security prerequisite for SHSM is that every device deploying the SHSM server (not the client) must be configured not to use cryptographic algorithms that require specific hardware for security (e.g., disabling AES-GCM if AES-NI support is unavailable). Following auditing standards like FIPS could trigger export bans similar to those imposed on early Cisco devices due to their use of cryptographic techniques. This clause aims to prevent the introduction of new security risks due to improper algorithm deployment. Of course, if the device has specific hardware, supporting specific cryptographic algorithms is also possible. However, the default is to not use or rely on cryptographic algorithms that require specific hardware for security.
 
+SHSM uses a lightweight database (such as MySQL) to temporarily store authentication challenge data, but does not store any cryptographic secret key and private key material.
+
 ## Summary
 This primarily provides a practically executable framework and a full-stack technology chain. It aims to provide locally filtered HSM functionality while simultaneously providing security features such as API key protection.
