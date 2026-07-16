@@ -10,6 +10,7 @@ Below states the flow of the readme(s).
 7. Deployment and security
 8. Client Language Support
 9. Known Limitations and current status
+10. Blockchain oracle and other questions
 
 # Regional and Collaboration Notes
 ## Malaysia
