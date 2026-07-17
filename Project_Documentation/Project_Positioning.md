@@ -15,7 +15,7 @@ In summary, HSM did address on 4 issues.
 
 1. Cryptographic algorithms’ side channel attacks (Eg, AES256GCM)
 2. Psychic signature or key exchange’s all zero shared secret (Software related cryptographic side-channel attacks)
-3. Handling of cryptographic secret keys in memory or in a secure manner
+3. Handling of cryptographic secret keys in memory or in a secure manner (Programming language related side-channel attacks)
 4. Prevent physical and virtual theft of cryptographic secret keys (Eg, CD key in earlier video games)
 
 SHSM though on the other hand address on different sets of issues.
