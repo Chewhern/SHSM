@@ -29,6 +29,9 @@ One can do it either with Arweave's NodeJS SDK or can use C#'s SDK for the purpo
 
 This set of test data will only be valid latest until the end of November (For Signed Sub Public Key's Info) and valid latest until the end of December (For AU's Info).
 
+- AU Info's Arweave ID: C9KP-zfOKRCD0U3aZZyhDhGIVL-XiF_uqdmAoLKJ8u4
+- Signed Sub Public Key's Info's Arweave ID: kU-xTiR_GrFOI2vSokmv9HxdXLPYQ1O9S59RG6poe9A
+
 # 中文
 **Users** 文件夹中的数据已使用以下代码片段和 **SPKI 的 TL 或 ML AU 的应用程序** 预先生成。
 
@@ -59,3 +62,6 @@ MyKeyPair.Clear();
 您可以使用 Arweave 的 NodeJS SDK 或 C# SDK 来实现此目的。但无论使用哪种方式，您都需要拥有实际的 AR 或 Arweave 加密货币，才能将数据锚定到 Arweave。
 
 这组测试数据的有效期最晚至 11 月底（针对已签名子公钥的信息）和 12 月底（针对 AU 的信息）。
+
+- AU Info's Arweave ID: C9KP-zfOKRCD0U3aZZyhDhGIVL-XiF_uqdmAoLKJ8u4
+- Signed Sub Public Key's Info's Arweave ID: kU-xTiR_GrFOI2vSokmv9HxdXLPYQ1O9S59RG6poe9A
