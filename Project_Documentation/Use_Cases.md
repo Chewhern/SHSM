@@ -14,4 +14,4 @@ SHSM addresses scenarios where hardware HSM is unavailable, unaffordable, or ove
 - Pointer-level permissions: Providing permission controls (readonly, read-write, no-execute) for cryptographic secret keys.
 - Password manager support: Enabling development of password managers with fewer programming language oriented side-channel attacks. This is currently only feasible in C, C++, and C#, because they provide mechanisms (such as GCHandle and manual memory control) to clear immutable String copies from memory after use.
 
-The client languages listed above are chosen because they support data types (e.g., pointers, byte[], or Buffer) comparable to C's unsigned char* or uint8_t*. 
+The client languages listed above are chosen because they support data types (e.g., ```pointers```, ```byte[]```, or ```Buffer```) comparable to C's ```unsigned char*``` or ```uint8_t*```. 
