@@ -24,7 +24,8 @@ HSMs are designed to address four main issues:
 
 SHSM addresses a different set of issues:
 
-1. It addresses the first three issues that HSMs aim to solve.
+1. SHSM addresses the first two issues that HSMs aim to solve, and attempts to address the third issue where HSMs typically leave the client-side risk unhandled. When keys are imported via languages with immutable string types, SHSM tries to clear the last reachable copy of that data in memory. This does not eliminate all possible copies, but provides a practical improvement over leaving them untouched.
+   If HSMs were to adopt this approach, the third issue would also be reduced. However, doing so would limit their compatibility with a wider range of client languages, as it would require stricter handling of key material at the client side.
 2. It provides a cheaper, open-source, software-based alternative — not a replacement. The security guarantees are lower than a physical HSM, but it remains a usable option for many environments.
 3. It is less likely to be affected by export restrictions (e.g., historical bans on Cisco devices using cryptographic techniques).
 
