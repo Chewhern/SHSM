@@ -8,7 +8,7 @@ Possible use cases include:
 - Secure password handling (Possible future integrations/customized logic integrated directly into SHSM's server code)
 
 
-Programming languages support (By having data type as close as one can be to C's ```unsigned char*``` or ```uint_8*`` include:
+Programming languages support (By having data type as close as one can be to C's ```unsigned char*``` or ```uint_8*``` include:
 
 - C# (Modern version)
 - Java
