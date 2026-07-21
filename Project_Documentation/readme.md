@@ -11,6 +11,9 @@ Below states the flow of the readme(s).
 8. Client Language Support
 9. Known Limitations and current status
 10. Blockchain oracle and other questions
+11. Possible SHSM adoption
+12. Integration security constraints
+13. Integration cost
 
 # Linux and Progression
 As the project progresses, the SHSM server side code is recommended to be hosted on a **Linux** VPS or VM. This is due to it has better OS flexibility and control over **Windows** and **MacOS**
