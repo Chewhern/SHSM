@@ -31,7 +31,7 @@ For most applications, the changes are limited to two areas:
 1. Key loading code
 
 - Before: Load key from file or environment variable.
-- After: Send required private or secret key to SHSM server once, store the required authentication digital signature private key (in binary data format instead of Base64), hardcode/use the client's hosting device's file system and access it in code, call the required cryptographic service from SHSM server with **user_id** and **signedchallengebase64** and **necessary JSON parameters if it's post** or **necessary query parameters if it's GET** to import the keys.
+- After: Store the required authentication digital signature private key (in binary data format instead of Base64), hardcode/use the client's hosting device's file system and access it in code, call the required cryptographic service from SHSM server with **user_id** and **signedchallengebase64** and **necessary JSON parameters if it's post** or **necessary query parameters if it's GET** to import the keys.
 
 2. Cryptographic operations
 - Before: Call local crypto library functions.
