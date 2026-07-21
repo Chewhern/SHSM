@@ -33,3 +33,6 @@ Potential actual use cases include:
 - Smallstep
 - OpenBao
 - SoftHSM-related tooling
+
+## CLI-Based Access (Potential Future Direction)
+Languages without libsodium bindings or BCASodium oriented implementations cannot currently act as SHSM clients. While a **sudo-level CLI tool** could bridge this gap, its development is not part of the current Alpha phase. Depending on demand, it may be considered in a later stage.
