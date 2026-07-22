@@ -1,24 +1,8 @@
-# Who will adopt SHSM?
-Given the nature of SHSM. 
+# Who Will Adopt SHSM?
+SHSM is designed for organizations and developers that require stronger software-based protection for cryptographic key material but cannot justify deploying dedicated hardware HSMs.
 
-Possible use cases include:
+Potential adopters include:
 
-- API keys (OAuth's client_id and client_secret) secure management on client's side.
-- Cryptographic secret or private keys that were encoded in Base64/PEM (Possible future integrations if SHSM had enough funds to go for **FIPS-140-2** or **FIPS-140-3** 's level one compliance out of 4 levels).
-- Secure password handling (Possible future integrations/customized logic integrated directly into SHSM's server code)
-
-
-Programming languages support (By having data type as close as one can be to C's ```unsigned char*``` or ```uint_8*``` include:
-
-- C# (Modern version)
-- Java
-- Go
-- Python
-- TypeScript/NodeJS
-
-There may be other programming languages that I missed. So far, these are the ones i know.
-
-Potential actual use cases include:
 - Open-source PKI projects
 - Identity providers
 - CI/CD signing systems
@@ -26,13 +10,53 @@ Potential actual use cases include:
 - Secure messaging software
 - Secrets management tools
 - Code signing infrastructure
+- Small and medium-sized organizations requiring stronger software-based key protection
 
-# What existing project(s) could integrate SHSM
+---
+
+# Possible Use Cases
+
+Possible use cases include:
+
+- Secure management of API credentials (e.g., OAuth `client_id` and `client_secret`) on the client side.
+- Secure handling of cryptographic secret keys and private keys, particularly those originating from Base64 or PEM encoded data.
+- Secure password handling through future server-side extensions or customized SHSM logic.
+
+Future enterprise-oriented integrations may become possible if SHSM eventually achieves **FIPS 140-2** or **FIPS 140-3 Level 1** compliance. However, FIPS certification is outside the scope of the current Alpha phase.
+
+---
+
+# Existing Projects That Could Integrate SHSM
+
+Potential integration targets include:
+
 - Keycloak extensions
 - EJBCA
 - Smallstep
 - OpenBao
 - SoftHSM-related tooling
 
-## CLI-Based Access (Potential Future Direction)
-Languages without libsodium bindings or BCASodium oriented implementations cannot currently act as SHSM clients. While a **sudo-level CLI tool** could bridge this gap, its development is not part of the current Alpha phase. Depending on demand, it may be considered in a later stage.
+These examples are intended to demonstrate potential interoperability rather than planned or officially supported integrations.
+
+---
+
+# Programming Language Support
+
+SHSM is intended for programming languages that can securely interact with native cryptographic libraries such as libsodium and BouncyCastle (or equivalent implementations).
+
+Current target languages include:
+
+- C# (.NET)
+- Java
+- Go
+- Python
+- TypeScript / Node.js
+
+Additional languages may become supported as suitable cryptographic libraries and secure integration approaches become available.
+
+---
+
+# CLI-Based Access (Potential Future Direction)
+Some programming languages currently lack mature libsodium bindings or BCASodium-oriented implementations.
+
+A privileged (**sudo-level**) CLI tool could provide an alternative integration mechanism for these languages. However, CLI support is **not part of the current Alpha phase** and will only be considered based on future demand and available development resources.
