@@ -12,7 +12,7 @@ Here're some attacks that will remain.
 Debugging detection is not currently enforced, as its security benefit for the server-side implementation has not been established. This may be considered in future iterations..
 
 # Security improvements that can be measured
-The following improvements while can be measured but there's no exact metrics or scores that are directly visible to developers or reviewers.
+SHSM currently provides qualitative security improvements rather than standardized quantitative security metrics.
 
 - fewer plaintext key copies? : If SHSM was used right, the SHSM client side will have fewer direct access to plaintext key.
 - automatic zeroization? : If SHSM was used right and with right operation choice, the code will help to automatic zero the keys on the server side. If it's SHSM on the client side, other than using the client application, client may need to manually zero the keys on their end or if there's future application
