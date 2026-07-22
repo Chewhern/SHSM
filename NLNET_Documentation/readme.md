@@ -4,6 +4,7 @@ This document provides supplementary context for the SHSM project. It covers:
 - Current technical verification status
 - Project sustainability considerations
 - Identified risks and mitigation measures
+- Potential security reviewer's questions
 
 Each of the context can refer to the respective **.md** file located within this directory.
 
@@ -11,3 +12,4 @@ Each of the context can refer to the respective **.md** file located within this
 2. Technical Verification
 3. Project Sustainability
 4. Potential risks and mitigation measures
+5. Security reviewer questions
