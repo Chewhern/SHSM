@@ -45,3 +45,5 @@ The last accessible string data can be removed, but the specific number of times
 
 Therefore, when developing functionalities for finance, cryptography, or network devices, try to limit yourself to C#, C++, or C.
 This is easier said than done.
+
+I'm not very familiar with C/C++, but in C, ```String``` can be replaced with ```unsigned char*, uint_8*, or void**``` when necessary and will still work normally. In C#, this is thanks to its GCHandle and IntPtr. You can look them up if needed.
