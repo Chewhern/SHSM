@@ -10,7 +10,7 @@ This directory contains background research and considerations that informed the
   - Physical and Virtual Theft
   - Programming Language Data Types (Mutable/Immutable)
   - Psychic Signature / All-Zero Shared Secret
-- **Summary**: A consolidated overview of the four main security concerns and SHSM's positioning relative to them.
+- **Summary**: A consolidated overview for the 4 layman explanations and SHSM's positioning relative to them.
 
 ## A note on informed consent
 The considerations behind this project are extensive, and I am aware that full informed consent is probably not achievable in practice. However, these documents are made available so that users and reviewers can at least have a clearer picture of the assumptions and constraints that shaped the design.
