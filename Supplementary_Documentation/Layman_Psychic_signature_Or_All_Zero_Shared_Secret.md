@@ -14,3 +14,8 @@ Another example: You and a friend agree on a secret code word.
 You both say "blue", but the software glitches and the actual stored value becomes an empty string. You think you’ve agreed on a secret, but in reality you’ve agreed on nothing.
 
 That’s what people call a psychic signature or an all‑zero shared secret — it looks like security is in place, but underneath, nothing is actually protected.
+
+# Reference
+[Computerphile's psychic signature](https://www.youtube.com/watch?v=502iGDxuiRk)
+
+[Soatok's All Zero Shared Secret](https://soatok.blog/2026/02/17/cryptographic-issues-in-matrixs-rust-library-vodozemac/)
