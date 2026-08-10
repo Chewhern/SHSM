@@ -46,4 +46,13 @@ The last accessible string data can be removed, but the specific number of times
 Therefore, when developing functionalities for finance, cryptography, or network devices, try to limit yourself to C#, C++, or C.
 This is easier said than done.
 
-I'm not very familiar with C/C++, but in C, ```String``` can be replaced with ```unsigned char*, uint_8*, or void**``` when necessary and will still work normally. In C#, this is thanks to its GCHandle and IntPtr. You can look them up if needed.
+I'm not very familiar with C/C++, but in C, ```String``` can be replaced with ```unsigned char*, uint_8*, or void**``` when necessary and will still work normally. In C#, this is thanks to its **GCHandle** and **IntPtr**. You can look them up if needed.
+
+# Reference
+[Python Video](https://www.youtube.com/watch?v=0P-Dhb8kW5E)
+
+From this video, one can generally do the same experiment with atomic data types like ```int,char,float,double``` and using data type of ```String``` which is also an object. For the stated data types, the layman explanation of how immutable data type works can be applied here.
+
+If one does the experiment using mutable data types like arrays, the layman explanation of how mutable data type works can be applied here.
+
+This underlying concepts can be applied to all programming languages.. but in the context of HSM or SHSM.., the programming language needs to have something like **C#'s** ```IntPtr, UIntPtr, GCHandle```. Lacking either one of these can't be used for HSM or SHSM core. 
