@@ -48,7 +48,7 @@ namespace SHSM_CLI.ActualCommands
                 int AlgorithmChoice = parseResult.GetValue(algorithmOption)!;
                 String SignedDataToBeVerified = parseResult.GetValue(dataOption)!;
                 int DataEncodingType = parseResult.GetValue(dataEncodingTypeOption)!;
-                if (Directory.GetFileSystemEntries(StandardizedDirectoriesFunction.PKCRootFolder).Length >0 && Directory.GetFileSystemEntries(StandardizedDirectoriesFunction.PKCRootFolder).Length<=3)
+                if (Directory.GetFileSystemEntries(StandardizedDirectoriesFunction.PKCRootFolder).Length >0 && Directory.GetFileSystemEntries(StandardizedDirectoriesFunction.PKCRootFolder).Length<=4)
                 {
                     Byte[] DigitalSignaturePublicKey = new Byte[] { };
                     Boolean IsProperPublicKeyExist = true;
@@ -150,7 +150,7 @@ namespace SHSM_CLI.ActualCommands
                 }
                 else
                 {
-                    Console.WriteLine("Error: There's no public key material in 'PublicKeyCryptography' directory or the public key material count is greater than 3.");
+                    Console.WriteLine("Error: There's no public key material in 'PublicKeyCryptography' directory or the public key material count is greater than 4.");
                 }
             });
 
