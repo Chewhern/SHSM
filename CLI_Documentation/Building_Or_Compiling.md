@@ -17,3 +17,5 @@ I have not yet explore on this due to the lack of Linux VPS.
 If I do have the time and chance, I will add instructions here like **how to call it directly in command prompt or terminal by using doing 'SHSM_CLI'**
 
 I believe this had something to do with **path** or **environment** in **Windows/MacOS/Linux**.
+
+**I might be wrong on this..**
