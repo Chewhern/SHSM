@@ -34,7 +34,7 @@ namespace SHSM_CLI.ActualCommands
 
             var dataEncodingTypeOption = new Option<int>("--encoding")
             {
-                Description = "The type of encoding for the data String. (0=UTF8/Unicode,1=Base64)",
+                Description = "The type of encoding for the verified data String. (0=UTF8/Unicode,1=Base64)",
                 DefaultValueFactory = _ => 0
             };
 
