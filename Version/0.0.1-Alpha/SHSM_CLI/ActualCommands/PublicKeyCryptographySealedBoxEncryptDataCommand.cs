@@ -49,7 +49,7 @@ namespace SHSM_CLI.ActualCommands
                 String DataToGetSealedBoxEncrypted = parseResult.GetValue(dataOption)!;
                 int DataEncodingType = parseResult.GetValue(dataEncodingTypeOption)!;
                 if (Directory.GetFileSystemEntries(StandardizedDirectoriesFunction.PKCRootFolder).Length > 0
-                && Directory.GetFileSystemEntries(StandardizedDirectoriesFunction.PKCRootFolder).Length <= 3
+                && Directory.GetFileSystemEntries(StandardizedDirectoriesFunction.PKCRootFolder).Length <= 4
                 && File.Exists(StandardizedDirectoriesFunction.PKCRootFolder + "SealedBoxPublicKey.txt")==true)
                 {
                     Byte[] DataToGetEncrypted = new Byte[] { };
@@ -98,7 +98,7 @@ namespace SHSM_CLI.ActualCommands
                 }
                 else
                 {
-                    Console.WriteLine("Error: There's no public key material in 'PublicKeyCryptography' directory or the public key material count is greater than 3 or there's no sealedbox public key.");
+                    Console.WriteLine("Error: There's no public key material in 'PublicKeyCryptography' directory or the public key material count is greater than 4 or there's no sealedbox public key.");
                 }
             });
 
