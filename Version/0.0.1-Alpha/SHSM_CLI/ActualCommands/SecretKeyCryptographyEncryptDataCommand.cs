@@ -65,7 +65,7 @@ namespace SHSM_CLI.ActualCommands
 
             var additionalDataOption = new Option<string>("--additional_data")
             {
-                Description = "Input String 'additional data' to be encrypted",
+                Description = "Input String 'additional data' to be submitted",
                 DefaultValueFactory = _ => ""
             };
 
