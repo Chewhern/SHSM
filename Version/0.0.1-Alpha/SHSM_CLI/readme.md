@@ -1,7 +1,7 @@
 # Important
 Most part of this CLI had been tested in **SHSM_ClientApp**.
 
-However, it had not yet been tested in official integration manner.
+However, it had not yet been tested in official software integration.
 
 Kindly use this at your own risk.
 
