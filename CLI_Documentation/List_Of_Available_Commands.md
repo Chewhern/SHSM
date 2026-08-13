@@ -51,12 +51,12 @@ There're 3 options for this command.
 
 ```
 --algorithm <algorithm>
---user_id <user_id>
+--user_ID <user_ID>
 --duration <duration>
 ```
 
 - algorithm: It accepts only ED25519 or ED448 as digital signature algorithms
-- user_id: What will be the user_id/directory name?
+- user_ID: What will be the user_ID/directory name?
 - duration: How long will this authorized user information be valid in months (minimum is 1 and maximum is 5)?
 
 **This command also helps developers or users to create the necessary JSON data String but requires information generated previously by ```genauinfo```**
@@ -92,14 +92,14 @@ There're 5 options for this command.
 --data <data>
 --encoding <encoding>
 --encoding_output <encoding_output>
---user_id <user_id>
+--user_ID <user_ID>
 ```
 
 - algorithm: It accepts only XSalsa20Poly1305 and XChaCha20Poly1305 symmetric encryption algorithms. (0=XSalsa20Poly1305, 1=XChaCha20Poly1305)
 - data: The String data to be encrypted
 - encoding: What's the encoding used? (0=UTF8/Unicode,1=Base64)
 - encoding_output: What encoding do you want to use to output the String data? (0=UTF8/Unicode,1=Base64)
-- user_id: What will be the user_id/directory name?
+- user_ID: What will be the user_ID/directory name?
 
 **There is unsolvable side-channel attacks on 'data and outputted_data' and there seemed to be no ways to solve it especially if the data is really sensitive/private to begin with.**
 
@@ -112,13 +112,13 @@ There're 4 options for this command.
 --algorithm <algorithm>
 --data <data>
 --encoding <encoding>
---user_id <user_id>
+--user_ID <user_ID>
 ```
 
 - algorithm: It accepts only ED25519 and ED448 digital signature algorithms. (0=ED25519, 1=ED448)
 - data: The String data to be signed
 - encoding: What's the encoding used? (0=UTF8/Unicode,1=Base64)
-- user_id: What will be the user_id/directory name?
+- user_ID: What will be the user_ID/directory name?
 
 ## PKCVerifyData (Local)
 There're 3 options for this command.
@@ -137,10 +137,10 @@ There're 3 options for this command.
 There's one option for this command.
 
 ```
---user_id <user_id>
+--user_ID <user_ID>
 ```
 
-- user_id: What will be the user_id/directory name?
+- user_ID: What will be the user_ID/directory name?
 
 This command helps to initialize a pair of secret keys on SHSM server side.
 
