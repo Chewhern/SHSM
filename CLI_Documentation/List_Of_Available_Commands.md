@@ -21,6 +21,8 @@ There're no available options for this command.
 
 **This needs to be called once so that necessary directories or folders can be created in advance..**
 
+**'ServerIP' must have 'IP.txt' with the API IP Address of SHSM Server**
+
 ## GenAUInfo (Local)
 There're 3 options for this command.
 
