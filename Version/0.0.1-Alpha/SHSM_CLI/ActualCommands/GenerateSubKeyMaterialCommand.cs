@@ -1,4 +1,4 @@
-﻿using ASodium;
+using ASodium;
 using BCASodium;
 using Newtonsoft.Json;
 using SHSM_CLI.DirectoryHelper;
@@ -59,54 +59,66 @@ namespace SHSM_CLI.ActualCommands
                 {
                     if (algorithmName.CompareTo("ED25519") == 0)
                     {
+                        Byte[] SubGeneralPurposeSignaturePublicKey = new Byte[] { };
                         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) 
                         {
                             RevampedKeyPair MyKeyPair = SodiumPublicKeyAuth.GenerateRevampedKeyPair();
-                            Byte[] RootSigningSignaturePrivateKey = File.ReadAllBytes(StandardizedDirectoriesFunction.UsersRootFolder + User_ID + "\\SPrivateKey.txt");
-                            Byte[] SubGeneralPurposeSignaturePublicKey = MyKeyPair.PublicKey;
-                            Byte[] SignedSubGeneralPurposeSignaturePublicKey = SodiumPublicKeyAuth.Sign(SubGeneralPurposeSignaturePublicKey, RootSigningSignaturePrivateKey,true);
+                            SubGeneralPurposeSignaturePublicKey = MyKeyPair.PublicKey;
                             File.WriteAllBytes(StandardizedDirectoriesFunction.UsersRootFolder + User_ID + "\\SubDSAPrivateKey.txt", MyKeyPair.PrivateKey);
                             File.WriteAllBytes(StandardizedDirectoriesFunction.UsersRootFolder + User_ID + "\\SubDSAPublicKey.txt", MyKeyPair.PublicKey);
                             MyKeyPair.Clear();
-                            SignedSubGeneralPurposeSignaturePublicKeyB64 = Convert.ToBase64String(SignedSubGeneralPurposeSignaturePublicKey);
                         }
                         else
                         {
                             RevampedKeyPair MyKeyPair = SodiumPublicKeyAuth.GenerateRevampedKeyPair();
-                            Byte[] RootSigningSignaturePrivateKey = File.ReadAllBytes(StandardizedDirectoriesFunction.UsersRootFolder + User_ID + "/SPrivateKey.txt");
-                            Byte[] SubGeneralPurposeSignaturePublicKey = MyKeyPair.PublicKey;
-                            Byte[] SignedSubGeneralPurposeSignaturePublicKey = SodiumPublicKeyAuth.Sign(SubGeneralPurposeSignaturePublicKey, RootSigningSignaturePrivateKey, true);
                             File.WriteAllBytes(StandardizedDirectoriesFunction.UsersRootFolder + User_ID + "/SubDSAPrivateKey.txt", MyKeyPair.PrivateKey);
                             File.WriteAllBytes(StandardizedDirectoriesFunction.UsersRootFolder + User_ID + "/SubDSAPublicKey.txt", MyKeyPair.PublicKey);
                             MyKeyPair.Clear();
-                            SignedSubGeneralPurposeSignaturePublicKeyB64 = Convert.ToBase64String(SignedSubGeneralPurposeSignaturePublicKey);
                         }
+                        Byte[] RootSigningSignaturePrivateKey = File.ReadAllBytes(StandardizedDirectoriesFunction.UsersRootFolder + User_ID + "\\SPrivateKey.txt");
+                        Byte[] SignedSubGeneralPurposeSignaturePublicKey = new Byte[] { };
+                        if (RootSigningSignaturePrivateKey.Length == 64) 
+                        {
+                            SignedSubGeneralPurposeSignaturePublicKey = SodiumPublicKeyAuth.Sign(SubGeneralPurposeSignaturePublicKey, RootSigningSignaturePrivateKey, true);
+                        }
+                        else 
+                        {
+                            SignedSubGeneralPurposeSignaturePublicKey = SecureED448.GenerateSignatureMessage(RootSigningSignaturePrivateKey, SubGeneralPurposeSignaturePublicKey, new Byte[] { }, true);
+                        }
+                        SignedSubGeneralPurposeSignaturePublicKeyB64 = Convert.ToBase64String(SignedSubGeneralPurposeSignaturePublicKey);
                         algorithmName = "ED25519";
                     }
                     else if (algorithmName.CompareTo("ED448") == 0)
                     {
+                        Byte[] SubGeneralPurposeSignaturePublicKey = new Byte[] { };
                         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                         {
                             ED448RevampedKeyPair MyKeyPair = SecureED448.GenerateED448RevampedKeyPair();
-                            Byte[] RootSigningSignaturePrivateKey = File.ReadAllBytes(StandardizedDirectoriesFunction.UsersRootFolder + User_ID + "\\SPrivateKey.txt");
-                            Byte[] SubGeneralPurposeSignaturePublicKey = MyKeyPair.PublicKey;
-                            Byte[] SignedSubGeneralPurposeSignaturePublicKey = SecureED448.GenerateSignatureMessage(RootSigningSignaturePrivateKey, SubGeneralPurposeSignaturePublicKey, new Byte[] { },true);
+                            SubGeneralPurposeSignaturePublicKey = MyKeyPair.PublicKey;
                             File.WriteAllBytes(StandardizedDirectoriesFunction.UsersRootFolder + User_ID + "\\SubDSAPrivateKey.txt", MyKeyPair.PrivateKey);
                             File.WriteAllBytes(StandardizedDirectoriesFunction.UsersRootFolder + User_ID + "\\SubDSAPublicKey.txt", MyKeyPair.PublicKey);
                             MyKeyPair.Clear();
-                            SignedSubGeneralPurposeSignaturePublicKeyB64 = Convert.ToBase64String(SignedSubGeneralPurposeSignaturePublicKey);
                         }
                         else
                         {
                             ED448RevampedKeyPair MyKeyPair = SecureED448.GenerateED448RevampedKeyPair();
-                            Byte[] RootSigningSignaturePrivateKey = File.ReadAllBytes(StandardizedDirectoriesFunction.UsersRootFolder + User_ID + "/SPrivateKey.txt");
-                            Byte[] SubGeneralPurposeSignaturePublicKey = MyKeyPair.PublicKey;
-                            Byte[] SignedSubGeneralPurposeSignaturePublicKey = SecureED448.GenerateSignatureMessage(RootSigningSignaturePrivateKey, SubGeneralPurposeSignaturePublicKey, new Byte[] { }, true);
+                            SubGeneralPurposeSignaturePublicKey = MyKeyPair.PublicKey;
                             File.WriteAllBytes(StandardizedDirectoriesFunction.UsersRootFolder + User_ID + "/SubDSAPrivateKey.txt", MyKeyPair.PrivateKey);
                             File.WriteAllBytes(StandardizedDirectoriesFunction.UsersRootFolder + User_ID + "/SubDSAPublicKey.txt", MyKeyPair.PublicKey);
                             MyKeyPair.Clear();
-                            SignedSubGeneralPurposeSignaturePublicKeyB64 = Convert.ToBase64String(SignedSubGeneralPurposeSignaturePublicKey);
                         }
+
+                        Byte[] RootSigningSignaturePrivateKey = File.ReadAllBytes(StandardizedDirectoriesFunction.UsersRootFolder + User_ID + "\\SPrivateKey.txt");
+                        Byte[] SignedSubGeneralPurposeSignaturePublicKey = new Byte[] { };
+                        if (RootSigningSignaturePrivateKey.Length == 64)
+                        {
+                            SignedSubGeneralPurposeSignaturePublicKey = SodiumPublicKeyAuth.Sign(SubGeneralPurposeSignaturePublicKey, RootSigningSignaturePrivateKey, true);
+                        }
+                        else
+                        {
+                            SignedSubGeneralPurposeSignaturePublicKey = SecureED448.GenerateSignatureMessage(RootSigningSignaturePrivateKey, SubGeneralPurposeSignaturePublicKey, new Byte[] { }, true);
+                        }
+                        SignedSubGeneralPurposeSignaturePublicKeyB64 = Convert.ToBase64String(SignedSubGeneralPurposeSignaturePublicKey);
                         algorithmName = "ED448";
                     }
                     else
