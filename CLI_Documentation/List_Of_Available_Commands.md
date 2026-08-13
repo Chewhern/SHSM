@@ -1,10 +1,10 @@
 # Available commands
 There're about 12 commands available.
 
-- check
-- genauinfo
-- gensubkey
-- pkcsealedboxencryptdata
+- check (tested)
+- genauinfo (tested)
+- gensubkey (tested)
+- pkcsealedboxencryptdata (tested)
 - pkcsealedboxdecryptdata
 - pkcsigndata
 - pkcverifydata
@@ -12,7 +12,7 @@ There're about 12 commands available.
 - skcencryptdata
 - skcdecryptdata
 - arweaveuploaddata
-- version
+- version (tested)
 
 All of these commands are **sudo** in nature except **genauinfo** command.
 
