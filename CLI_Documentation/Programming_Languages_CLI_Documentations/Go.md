@@ -26,6 +26,6 @@ func main() {
 	if err != nil {
 		log.Fatalf("Command execution failed: %s", err)
 	}
-```
 	fmt.Println(string(output))
 }
+```
