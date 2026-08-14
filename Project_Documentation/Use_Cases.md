@@ -16,4 +16,4 @@ SHSM addresses scenarios where hardware HSM is unavailable, unaffordable, or ove
 
 The client languages listed above are chosen because they support data types (e.g., ```pointers```, ```byte[]```, or ```Buffer```) comparable to C's ```unsigned char*``` or ```uint8_t*```. 
 
-**```Password manager support``` may need advanced programming or security oriented implementation due to ```mutable and immutable data types``` considerations. The implementations and logic can't be fitted within this markdown content or file.**
+**```Password manager support or Proper password processing``` may need advanced programming or security oriented implementation due to ```mutable and immutable data types``` considerations. The implementations and logic can't be fitted within this markdown content or file.**
