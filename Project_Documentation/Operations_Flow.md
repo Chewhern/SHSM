@@ -16,6 +16,9 @@ To perform any operations, IP Config had to be done in advance.
 Any **Export** wording means the server side will use submitted signed export public key to encrypt in a way that only client can decrypt. It'll be primarily used for sending server's current session's private or secret keys to client side for future use. 
 
 ## Registration
+There're two plausible methods..
+
+### First Method
 1. Use SPKITL or SPKIML's AU App to get proper AU information.
 2. Use AU information to anchor it with SPKITL or SPKIML's ON App that will help anchor to Arweave automatically.
 
@@ -58,6 +61,9 @@ String JSONBodyString = JsonConvert.SerializeObject(MyModel);
 
 4. Get **AU_Info's Arweave ID,AU Signed Sub DSA Public Key Arweave ID** and input it to the client application or refer to its underlying logic to mimic HTTP API call. This should add the information to memory.
 5. Optionally, you can change the export public keys.
+
+### Second Method
+Kindly use the **SHSM_CLI** to generate the necessary **JSON** data. This pair of JSON data can then be anchored to **Arweave**. This should return 2 unique **Arweave_ID**s by default. You can then use the **Arweave_ID**s accordingly. There're certain operational security procedures one needs to follow. 
 
 ## ETLS to API Key Operations
 These operations need to rely on users or developers to configure IP address and establish connection to the server.
