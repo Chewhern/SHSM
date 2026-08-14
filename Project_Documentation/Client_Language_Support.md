@@ -1,3 +1,4 @@
+# Chosen client programming languages and security reasonings
 SHSM currently recommends and supports the following languages as clients:
 - Java
 - Node.js / TypeScript
@@ -11,3 +12,14 @@ The selection is based on a practical engineering consideration: **to use SHSM e
 Languages that primarily handle binary data as immutable strings, or that lack direct access to raw byte buffers, are not currently supported as SHSM clients. Using them would increase the risk of key material remaining in memory after use.
 
 This design choice is not intended to exclude specific languages, but to ensure that the security properties described in the SHSM core definitions can be reasonably maintained on the client side.
+
+# CLI and interoperability between different programming languages
+As long as the client's programming languages able to support and use **external CLI**, there won't be any programming languages that CLI can't support.
+
+The tested programming languages as of now:
+- Java
+- Node.js/TypeScript
+- Go
+- Python
+- Modern C#
+- Deprecated/Older C#
