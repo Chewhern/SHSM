@@ -48,3 +48,5 @@ Client side requires:
 - A libsodium wrapper library for the programming language used (e.g., `sodium-native` for Node.js, `pysodium/pynacl` for Python, `libsodium-jna/lazysodium-java/lazysodium-android` bindings for Java, or an equivalent library).
 - A BouncyCastle or equivalent cryptography library that can perform signature message generation and verification similar to **BCASodium**'s **SecureED448**.
 - HTTP client capability (e.g., `fetch`, `requests`, `HttpClient`) and JSON serialization/deserialization support.
+
+Or client can just use **CLI** for easier and slightly safer-ish integration and development for the chosen programming language. This does has a prerequisite of the chosen programming language able to call or use **external CLI**.
