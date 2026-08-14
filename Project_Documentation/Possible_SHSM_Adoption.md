@@ -54,9 +54,13 @@ Current target languages include:
 
 Additional languages may become supported as suitable cryptographic libraries and secure integration approaches become available.
 
+**With newly developed Alpha version of CLI, the programming language's barrier had diminished. However, this does mean the chosen programming language needs to be able to ```call or use external CLI```**
+
 ---
 
 # CLI-Based Access (Potential Future Direction)
 Some programming languages currently lack mature libsodium bindings or BCASodium-oriented implementations.
 
-A privileged (**sudo-level**) CLI tool could provide an alternative integration mechanism for these languages. However, CLI support is **not part of the current Alpha phase** and will only be considered based on future demand and available development resources.
+A privileged (**sudo-level**) CLI tool could provide an alternative integration mechanism for these languages.
+
+**The CLI had been made available recently..**
