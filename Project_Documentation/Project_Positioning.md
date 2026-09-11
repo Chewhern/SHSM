@@ -44,6 +44,10 @@ For example:
 
 These risks exist outside the HSM itself and are generally considered application-level responsibilities rather than weaknesses of the HSM.
 
+**```This part can refer to the link below. This is also the primary issue that SHSM intended to cover or address on.```**
+
+[here](https://github.com/Chewhern/SHSM/blob/main/Project_Documentation/Key_Material_Handling_And_Client_Security_Considerations.md)
+
 ---
 
 # What is SHSM?
