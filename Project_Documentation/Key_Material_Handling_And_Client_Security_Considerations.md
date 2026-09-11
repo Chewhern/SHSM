@@ -232,6 +232,8 @@ The exact mechanism should be selected per command rather than assuming
 that every secret can safely be passed as a normal command-line
 argument.
 
+**```As of now, the CLI did not require the importing of keys via command line stated in "2.". The cryptographic keys were stored in files or retrieved from files as binary streams of data which is mutable data type by default.```**
+
 ## 7. Relationship to PKI, Secret-Management, and HSM Projects
 
 SHSM does not claim that existing PKI, secret-management, or HSM
@@ -373,7 +375,6 @@ SHSM development work, particularly:
 -   API/CLI consistency;
 -   interoperability testing;
 -   key lifecycle testing;
--   multi-session and multi-user testing;
 -   regression testing;
 -   deployment security documentation; and
 -   implementation refinement.
@@ -389,7 +390,7 @@ maintainable.
 
 SHSM should therefore avoid claims such as:
 
--   "C# completely solves immutable-string security."
+-   "C#/C++/C completely solves immutable-string security."
 -   "Base64 is itself a vulnerability."
 -   "Bouncy Castle does not provide secure memory handling."
 -   "Existing HSMs do not protect imported keys."
