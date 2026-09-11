@@ -23,3 +23,5 @@ The tested programming languages as of now:
 - Python
 - Modern C#
 - Deprecated/Older C#
+
+**```Although developers may prefer customizations, it's better to stick to modern C# and the corresponding CLI application. This is to ensure proper and secure key lifetime management from the moment it exists in client application all the way to server or CLI.```**
