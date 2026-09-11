@@ -407,3 +407,7 @@ The defensible claim is narrower:
 
 This distinction between functional correctness and security-oriented
 engineering is a central consideration in the design of SHSM.
+
+**```12th section of this readme content only makes sense if it's coming from NLNET that had my first initial proposal towards the project. It can also makes sense if one have the right expertise to understand about both PKI and programming as a whole.```**
+
+**```I do feel that this 12th section seemed like it can stay here but something's a bit off. I don't know how to modify it. I will just let it stay as it's for the time being until I do know how to modify it in the future..```**
