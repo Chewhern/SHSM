@@ -29,7 +29,7 @@ Debugging detection is not currently enforced, as its security benefit for the s
 SHSM currently provides qualitative security improvements rather than standardized quantitative security metrics.
 
 - fewer plaintext key copies? : If SHSM was used right, the SHSM client side will have fewer direct access to plaintext key.
-- automatic zeroization? : If SHSM was used right and with right operation choice, the code will help to automatic zero the keys on the server side. If it's SHSM on the client side, other than using the client application, client may need to manually zero the keys on their end or if there's future application
+- automatic zeroization? : If SHSM was used right and with right operation choice, the code will help to automatic zero the keys on the server and client side. This also extends to CLI. If the CLI was not used by the client and client uses HTTP API instead, then client may need to manually zero the keys on their end if the selected choice of programming language had **byte[] or Byte[] or Buffer** equivalent mutable data types. 
 - page protection? and memory isolation? : Libsodium's ```sodium_malloc, sodium_free, sodium_mprotect_noaccess, sodium_mprotect_readonly, sodium_mprotect_readwrite``` had been used to enforce the stated security measures.
 - shorter key exposure windows? : If SHSM server code had been customized, the exposure windows can be shortened to less than 1 hour. If there's no customization, the exposure windows by default is 1 hour. 
 
