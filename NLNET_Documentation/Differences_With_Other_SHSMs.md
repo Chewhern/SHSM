@@ -449,3 +449,18 @@ The primary objective is improving practical security while maintaining:
 - Cost efficiency
 - Cryptographic verifiability
 - Reduced operational complexity
+
+### Key-material handling across the client boundary
+
+SHSM's security model considers not only protection inside the SHSM
+service, but also how sensitive key material is represented and passed
+through client applications, SDKs, and CLI interfaces.
+
+This is not a claim that existing PKI, secret-management, or HSM
+projects are unaware of secure-memory issues. Rather, SHSM places
+particular emphasis on treating the service, client application, and
+CLI as parts of the overall key-material handling path.
+
+For a more detailed discussion, see:
+
+[Key Material Handling and Client-Side Security Considerations](../Project_Documentation/Key_Material_Handling_And_Client_Security_Considerations.md).
