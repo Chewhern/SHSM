@@ -81,3 +81,9 @@ You'll need to input RSA whole key into the SHSM server using **import** functio
 Then only you can use the Arweave anchoring function.
 
 This function was provided to ensure the private key stay contained and able to securely wiped out after use which determined by developers or users..
+
+**```API Key operations can refer to the SHSM server code for the template provided. This is because of nice features available in C# that can attempt to remove the last copy of API key in String format such as IntPtr and GCHandle. API Key operations need to be customized by developers and let the SHSM server does the effective and secure clearing & possible secure handling of API keys```**
+
+**```Similar situation apply to password managers that want to use SHSM. However, password managers have a different problem. The recommended approach is to somehow customized the SHSM server code so that it changed from current web API application into a web application that combines both dynamic webpage functions and web API functions. Go, NodeJS, Python, Java's coded password managers should only handle the passwords after it's being hashed and encrypted by the SHSM server code. Dealing with passwords in String were not recommended. If further processing/deriving master secret key from user processed password were needed, the corresponding Go, NodeJS, Python, Java's code can take over the task and do the necessary processing. The core idea here is simple, to prevent dealing with String based password in Go, NodeJS, Python, Java (The dealing with String based password should only be done in modern C#, C and C++), and let Go, NodeJS, Python and Java to specifically handle Byte[] or Buffer as they're safer to handle and able to easily cleared securely in memory if required..```**
+
+**```I am not sure for PEM/DER format data from certificates for now. If I have the expertise, I will revisit this section..```**
