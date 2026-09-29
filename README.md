@@ -21,6 +21,8 @@ Some potential use cases include:
 
 * Complementing an HSM in **BYOK (Bring Your Own Key)** workflows where key material must be handled by an application before reaching the HSM boundary.
 * Providing an additional memory-handling layer in environments without an HSM.
+* Complementing **password manager applications** where sensitive passwords or key material are handled within managed or garbage-collected runtimes and additional process isolation or memory-lifecycle controls are useful.
+* Providing an additional protection boundary for **API keys and other application credentials** when they are involved in cryptographic or key-management operations.
 * Providing an option for applications whose existing implementation does not provide the memory-lifecycle controls required by their threat model.
 
 ## What SHSM Is Not
@@ -28,6 +30,7 @@ Some potential use cases include:
 * Not a replacement for hardware HSMs
 * Not a PKCS#11 implementation
 * Not a replacement for SoftHSM
+* Not a general-purpose password manager or secrets-management system
 * Not a FIPS-certified module
 
 SHSM is intended for environments where hardware HSMs are unavailable, unsuitable, or too costly, and where an additional application-layer security boundary is useful.
@@ -50,15 +53,15 @@ Documentation is currently primarily available in English. Additional translatio
 
 ## 问题所在
 
-在使用 C#、Java、Go、Python 和 Node.js 等托管语言编写的应用程序中，敏感密钥材料可能会被复制或在应用程序内存中保留超出预期的时间。不可变的 `String`（字符串）值就是一个明显的例子；当运行时环境或相关库无法提供确定性的内存管理机制时，`byte[]`（字节数组）及其他数据表示形式也可能面临同样的问题。
+在使用 C#、Java、Go、Python 和 Node.js 等托管语言编写的应用程序中，敏感密钥材料可能会被复制或在应用程序内存中保留超出预期的时间。不可变的 `String`（字符串）值就是一个明显的例子；当运行时环境或相关库无法提供确定性的内存处理机制时，`byte[]`（字节数组）及其他数据表示形式也可能面临同样的问题。
 
 这导致了**密钥材料在 HSM 安全边界之外的暴露窗口**。硬件 HSM 在其内部保护密钥材料；SoftHSM 和 PKCS#11 实现则在其各自的软件边界内提供保护。然而，在密钥材料到达这些边界之前，它仍可能存在于应用程序内存中。
 
 ## SHSM 的功能
 
-SHSM 是一项将加密操作与客户端进程分离的服务，它针对客户端到服务器传输路径中的敏感材料，提供了经过精心设计的内存生命周期控制机制。
+SHSM 是一项将加密操作与客户端进程分离的服务，它针对客户端到服务器路径中的敏感材料，提供经过精心设计的内存生命周期控制机制。
 
-其设计目标是最大限度缩短敏感材料在 SHSM 客户端和服务器所控制内存区域中的驻留时间，涵盖密钥导入、生成和传输等各个环节。
+其设计目标是最大限度缩短敏感材料在 SHSM 客户端和服务器所控制内存区域中的驻留时间，涵盖密钥导入、生成和传输等环节。
 
 * 通过 HTTP API 提供服务
 * API 层面与编程语言无关
@@ -69,6 +72,8 @@ SHSM 是一项将加密操作与客户端进程分离的服务，它针对客户
 
 * 在 **BYOK（自带密钥）** 工作流中作为 HSM 的补充，即密钥材料在到达 HSM 边界前必须先由应用程序进行处理的场景。
 * 在没有 HSM 的环境中提供额外的内存处理层。
+* 补充**密码管理器应用程序**，特别是在敏感密码或密钥材料由托管运行时或垃圾回收运行时处理，并且需要额外进程隔离或内存生命周期控制的场景。
+* 在 **API 密钥及其他应用程序凭据**参与加密或密钥管理操作时，为其提供额外的保护边界。
 * 为那些现有实现无法满足其威胁模型所要求的内存生命周期控制标准的应用程序提供一种解决方案。
 
 ## SHSM 不包含的内容
@@ -76,9 +81,12 @@ SHSM 是一项将加密操作与客户端进程分离的服务，它针对客户
 * 并非硬件 HSM 的替代品
 * 并非 PKCS#11 实现
 * 并非 SoftHSM 的替代品
+* 并非通用密码管理器或 Secrets Management 系统
 * 并非 FIPS 认证模块
 
-SHSM 适用于硬件 HSM 不可用、不适用或成本过高，且需要额外应用层安全边界的环境。 ## 开发者须知
+SHSM 适用于硬件 HSM 不可用、不适用或成本过高，且需要额外应用层安全边界的环境。
+
+## 开发者须知
 
 在使用 `TestData` 测试 SHSM 时，请避免执行标记为 `Root` 或 `root` 的操作。
 
